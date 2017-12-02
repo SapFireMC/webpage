@@ -1,0 +1,139 @@
+<html>
+<head>
+	<title> Trivia
+	</title>
+	</head>
+<body>
+		<div id="background">
+	</div>
+	<div id="background2">
+	</div>
+<link rel="stylesheet" type="text/css" href="css/second.css">
+<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+	<nav id="Navigation" class="large">
+<a href="index.html"><img width="50px" src="image/house.png"
+	onmouseover="this.src='image/house2.png'"
+onmouseout="this.src='image/house.png'"
+border="0" alt=""/></a>
+<section id ="image"> <a href="page2.html"><img width="50px" src="image/photo.png"></a> </section>
+<section id ="help"> <a href="page3.html"><img width="50px" src="image/help.png"></a> </section>
+<section id="pokemon"> <a href="http://www.pokemon.com"><img width="150px" src="Image/Pokemon_logo.png"></a> </section>
+	</nav>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="banner">
+	<center><a href="http://www.google.ca"><img width="1350" src="Image/banner.jpg"></a></center>
+</div>
+<div class="banner">
+	<center><img width="1350" src="Image/banner2.jpg"></center>
+</div>
+<div class="banner">
+	<center><img width="1350" src="Image/banner3.jpg"></center>
+</div>
+			<div id="content">
+	<form>
+		<div class="grid-row">
+			<div class="grid-col-1of2">
+				<p class="red" id="1q"> </p>
+				<p class="green" id="1r"> </p>
+				<h1> Who captured Mewtwo? </h1>
+				<input type="radio" name="question1" id="a"> Ash <br>
+				<input type="radio" name="question1" id="b"> Red <br>
+						<input type="radio" name="question1" id="c"> Blue <br>
+						<p class="red" id="2q"> </p>
+						<p class="green" id="2r"> </p>
+						<h1> Which Pokemon is a pure Water Type? </h1>
+								<input type="radio" name="question2" id="a2"> Squirtle <br>
+				<input type="radio" name="question2" id="b2"> Pikachu <br>
+						<input type="radio" name="question2" id="c2"> Charizard <br>
+						<input type="radio" name="question2" id="d2"> Some guy <br>
+						<input type="radio" name="question2" id="e2"> Mew <br>
+					</div>
+							<div class="grid-col-1of2">
+								<h1> How many Pokemon were there in Gen 1? </h1>
+						<input type="number" min="0" id="a3">
+						<br>
+						<br>
+						<select id="5" name="question3">
+							<option value="a4"> Pallet Town </option>
+								<option value="b4"> Other town </option>
+								<option value="c4"> Another Town </option>
+						</select>
+						<br>
+						<br>
+						<button onclick="return checkAnswers()"> submit </button>
+					</div>
+				</div>
+<script type="text/javascript">
+	function checkAnswers() {
+		correct = 0
+		if (document.getElementById("b").checked) {
+			correct = correct + 1
+		} else {
+			document.getElementById("1r").innerHTML = "correct!"
+		}
+		if (document.getElementById("a").checked) {
+			correct = correct + 0
+			} else {
+			document.getElementById("1q").innerHTML = "that was wrong"
+		}
+		if (document.getElementById("c").checked) {
+			correct = correct + 0
+			} else {
+			document.getElementById("1q").innerHTML = "that was wrong"
+		}
+		if (document.getElementById("a2").checked) {
+			correct = correct + 1
+			} else {
+			document.getElementById("2r").innerHTML = "correct!"
+		}
+		if (document.getElementById("b2").checked) {
+			correct = correct + 0
+			} else {
+			document.getElementById("2q").innerHTML = "that was wrong"
+		}
+		if (document.getElementById("c2").checked) {
+			correct = correct + 0
+			} else {
+			document.getElementById("2q").innerHTML = "that was wrong"
+		}
+		if (document.getElementById("d2").checked) {
+			correct = correct + 0
+			} else {
+			document.getElementById("2q").innerHTML = "that was wrong"
+		}
+		if (document.getElementById("e2").checked) {
+			correct = correct + 0
+			} else {
+			document.getElementById("2q").innerHTML = "that was wrong"
+		}
+		if (document.getElementById("a3").value == 151) {
+			correct = correct + 1
+		}
+		alert("You answered " + correct + "/3")
+		if (correct == 3) {
+			window.location.href = "congrats.html"
+		}
+		return false
+	}
+</script>
+	</form>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<section id="footer">
+	<p> Email: abc@gmail.com <br> Phone: 604-999-9999 </p>
+</section>
+</div>
+<script src="js/jquery.js"> </script>
+<script src="js/parallax.js"> </script>
+<script src="js/slideshow.js"> </script>
+<script src="js/navigation.js"> </script>
+</body>
+</html>
